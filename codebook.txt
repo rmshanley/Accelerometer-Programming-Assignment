@@ -1,0 +1,49 @@
+Data Description
+================
+
+This code generates two data tables each with 68 variables.
+
+The first two variables identify the subject and activity:
+
+subject.ID	an integer between 1 and 30 that identifies the study subject
+activity	an activity descriptor: "LAYING", "SITTING", "STANDING", "WALKING", "WALKING_DOWNSTAIRS", or "WALKING UPSTAIRS"
+
+In the first table, "all_mean_and_std_data", there can be multiple observations for each subject/activity combination.  In the second table, "subject_activity_avgs", multiple subject/activity observations are averaged and compressed into a single row.
+
+The measured variables are described below:
+
+
+Feature Selection 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals tAcc-XYZ and tGyro-XYZ. These time domain signals (prefix 't' to denote time) were captured at a constant rate of 50 Hz. Then they were filtered using a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the acceleration signal was then separated into body and gravity acceleration signals (tBodyAcc-XYZ and tGravityAcc-XYZ) using another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (tBodyAccJerk-XYZ and tBodyGyroJerk-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm (tBodyAccMag, tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing fBodyAcc-XYZ, fBodyAccJerk-XYZ, fBodyGyro-XYZ, fBodyAccJerkMag, fBodyGyroMag, fBodyGyroJerkMag. (Note the 'f' to indicate frequency domain signals). 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'[XYZ]' is used to denote 3-axial signals in the X, Y and Z directions.
+
+There are 33 'mean' variables (where applicable, [XYZ] represents three distinct variables) which are all decimal numbers:
+
+tBodyAcc.mean...[XYZ]
+tGravityAcc.mean...[XYZ]
+tBodyAccJerk.mean...[XYZ]
+tBodyGyro.mean...[XYZ]
+tBodyGyroJerk.mean...[XYZ]
+tBodyAccMag.mean..
+tGravityAccMag.mean..
+tBodyAccJerkMag.mean..
+tBodyGyroMag.mean..
+tBodyGyroJerkMag.mean..
+fBodyAcc.mean...[XYZ]
+fBodyAccJerk.mean...[XYZ]
+fBodyGyro.mean...[XYZ]
+fBodyAccMag.mean..
+fBodyAccJerkMag.mean..
+fBodyGyroMag.mean..
+fBodyGyroJerkMag.mean..
+
+There are also 33 'std' variables which are all decimal numbers.  They have the same names as the above list but 'std' replaces 'mean', for example
+tBodyAcc.std...X
